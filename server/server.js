@@ -13,11 +13,18 @@ console.log('server ready');
     // user provide userQuery
     // user provide startDate & endDate
 
-
   app.get('/question', (req, res) => {
     const { input } = req.query;
-    // console.log(input);
-    res.json(news.articles(input, '12-03-17', '12-10-17'));
+    const testParameters = {
+      'url': 'https://stackoverflow.com/questions/33108326/how-to-pass-client-side-parameters-to-the-server-side-in-angular-node-js-express',
+      'features': {
+      'emotion': {
+      'document': true,
+      }
+    }};
+      console.log(news.articles('bitcoin', '12-10-17', '12-19-17') + ' from server');
+      // watson.callWatson(testParameters).then(results => res.json(results));
+
   });
 
 app.listen(8080, function () {

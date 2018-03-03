@@ -28,8 +28,9 @@ const callWatson = function(parameters) {
               console.log('error:', err);
               reject(err);
           } else {
-              console.log(JSON.stringify(response) + ' from watson');
+              const results = JSON.stringify(response);
               resolve(JSON.stringify(response));
+              // return results;
           }
       });
 

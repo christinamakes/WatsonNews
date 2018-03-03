@@ -11,11 +11,11 @@ const handlers = (function () {
       event.preventDefault();
       const input = $('.js-search-text').val();
       console.log('hello');
-      console.log(input);
+      // console.log(input);
 
       api.getNews('/question', input)
         .then(res => {
-          console.log(res);
+          console.log(res + ' returned from call');
         });
     });
   }
