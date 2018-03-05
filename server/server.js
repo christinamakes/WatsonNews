@@ -22,8 +22,8 @@ console.log('server ready');
       'document': true,
       }
     }};
-      console.log(news.articles('bitcoin', '12-10-17', '12-19-17') + ' from server');
-      // watson.callWatson(testParameters).then(results => res.json(results));
+      // console.log(news.articles('bitcoin', '12-10-17', '12-19-17') + ' from server');
+      watson.callWatson(testParameters).then(results => res.json(results));
 
   });
 
